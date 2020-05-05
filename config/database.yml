@@ -7,7 +7,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username:  <%= ENV["MASTER_USER"] %>
   password:  <%= ENV["MASTER_PASS"] %>
-  host: localhost
+  host: ec2-34-204-22-76.compute-1.amazonaws.com
   port: 5432
 #  socket: /var/run/mysqld/mysqld.sock
 
