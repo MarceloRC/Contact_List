@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'jquery-rails',   '4.2.1'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -29,9 +30,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # gem figaro
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'thor', '~> 0.14', '>= 0.14'
-gem 'bundler', '~> 2.1', '>= 2.1.4'
-gem 'rake', '~> 13.0', '>= 13.0.1'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
