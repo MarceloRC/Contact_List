@@ -1,6 +1,6 @@
-MASTER_USER: rails_dev
-MASTER_PASS: "dev123"
-MASTER_HOST:  localhost
-# MASTER_USER: qiwcuzdmqfycpm
-# MASTER_PASS: "d50b8e8239baa7a2491e67ab45057a23aeb4574093aa923b45b6e7de0f8c9427"
-# MASTER_HOST:  ec2-34-204-22-76.compute-1.amazonaws.com
+# MASTER_USER: rails_dev
+# MASTER_PASS: "dev123"
+# MASTER_HOST:  localhost
+MASTER_USER: spopsdecrtoapa
+MASTER_PASS: "429cab0892589e4c062ff77ae553e1331d65fc5b1e91613164311d59eda1380d"
+MASTER_HOST:  ec2-52-70-15-120.compute-1.amazonaws.com
