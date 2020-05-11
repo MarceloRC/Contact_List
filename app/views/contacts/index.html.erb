@@ -11,7 +11,6 @@
           <th>Telefone</th>
           <th colspan="2">
             Ações
-            <%= link_to 'Novo Contato', new_contact_path, class: 'btn btn-success' %>
           </th>
         </tr>
       </thead>
@@ -20,7 +19,7 @@
           <tr>
             <td colspan="4" class="text-center">
               <h3>Sem contatos cadastrados.</h3>
-              <%= link_to 'click aqui', new_contact_path %> para cadastrar um novo contato
+              <%= link_to 'click aqui', new_user_contact_path(current_user) %> para cadastrar um novo contato
             </td>
           </tr>
         <% end %>
@@ -30,17 +29,18 @@
             <%= c.name %>
           </td>
           <td>
-            <%= c.phone %>
+            <%= c.phone_number %>
           </td>
           <td>
-            <%= link_to 'Editar', edit_contact_path, class: 'btn btn-warning' %>
-          </td>
-          <td>
-            <%= link_to 'Excluir', contact_path, method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza que deseja excluir?' } %>
+            <%= link_to 'Editar', edit_user_contact_path(current_user, c), class: 'btn btn-warning' %>
+
+            <%= link_to 'Excluir', user_contact_path(current_user, c), method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza que deseja excluir?' } %>
           </td>
         </tr>
         <% end %>
+
       </tbody>
     </table>
+    <%= link_to 'Novo Contato', new_user_contact_path(current_user), class: 'btn btn-success' %>
   </div>
 </div>
