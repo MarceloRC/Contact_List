@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
 
+  def set_locale
+     I18n.locale = params[:locale] || I18n.default_locale
+   end
+   
   private
     def require_logged_in_user
       unless user_signed_in?

@@ -1,6 +1,4 @@
 pt:
-  hello:    'Olá mundo!'
-
   activerecord:
     attributes:
       user:
@@ -8,6 +6,9 @@ pt:
         email:                  'E-mail'
         password:               'Senha'
         password_confirmation:  'Confirmação da Senha'
+  generic:
+    contact_list:    'Lista de Contatos'
+    create_account:  'Crie Sua Conta'
 
     errors:
       messages:
