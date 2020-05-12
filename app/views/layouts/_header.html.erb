@@ -16,7 +16,7 @@
     <ul class="nav navbar-nav">
       <% if !user_signed_in? %>
         <li class="active">
-          <%= link_to 'Nova Conta', cadastro_path %>
+          <%= link_to (t 'generic.new_account' ), cadastro_path %>
         </li>
       <% end %>
     </ul>
@@ -25,7 +25,7 @@
 
       <% if !user_signed_in? %>
         <li>
-          <%= link_to 'Entrar', entrar_path %>
+          <%= link_to (t 'generic.login' ), entrar_path %>
       </li>
       <% else %>
         <li class="dropdown">
@@ -34,14 +34,14 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <%= link_to 'Minha Pagina', user_contacts_path(current_user) %>
+              <%= link_to (t 'generic.my_page' ), user_contacts_path(current_user) %>
             </li>
             <li>
-              <%= link_to 'Editar', edit_user_path(current_user) %>
+              <%= link_to (t 'generic.edit' ), edit_user_path(current_user) %>
             </li>
             <li class="divider" role="separator"></li>
             <li>
-              <%= link_to 'Sair', sair_path, method: :delete %>
+              <%= link_to (t 'generic.exit' ), sair_path, method: :delete %>
             </li>
           </ul>
         </li>

@@ -1,16 +1,16 @@
 <div class="row">
-  <div class="col-xs-12 text-center">
-    <h1>Meus Contatos</h1>
+  <div class="col-xs-12 center">
+    <h1><%= (t 'generic.my_contacts' ) %></h1>
   </div>
 
   <div class="col-md-8 col-md-offset-2 col-xs-12">
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Nome</th>
-          <th>Telefone</th>
+          <th><%= (t 'generic.name' ) %></th>
+          <th><%= (t 'generic.phone_number' ) %></th>
           <th colspan="2">
-            Ações
+            <%= (t 'generic.actions' ) %>
           </th>
         </tr>
       </thead>
@@ -18,29 +18,24 @@
         <% if @contacts.empty? %>
           <tr>
             <td colspan="4" class="text-center">
-              <h3>Sem contatos cadastrados.</h3>
-              <%= link_to 'click aqui', new_user_contact_path(current_user) %> para cadastrar um novo contato
+              <h3><%= (t 'generic.no_contacts' ) %></h3>
+              <%= link_to (t 'generic.click_here' ), new_user_contact_path(current_user) %> para cadastrar um novo contato!
             </td>
           </tr>
         <% end %>
         <% @contacts.each do |c| %>
         <tr>
+          <td><%= c.name %></td>
+          <td><%= c.phone_number %></td>
           <td>
-            <%= c.name %>
-          </td>
-          <td>
-            <%= c.phone_number %>
-          </td>
-          <td>
-            <%= link_to 'Editar', edit_user_contact_path(current_user, c), class: 'btn btn-warning' %>
-
-            <%= link_to 'Excluir', user_contact_path(current_user, c), method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza que deseja excluir?' } %>
+            <%= link_to (t 'generic.edit' ), edit_user_contact_path(current_user, c), class: 'btn btn-warning' %>
+            <%= link_to (t 'generic.delete' ), user_contact_path(current_user, c), method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza que deseja excluir?' } %>
           </td>
         </tr>
         <% end %>
 
       </tbody>
     </table>
-    <%= link_to 'Novo Contato', new_user_contact_path(current_user), class: 'btn btn-success' %>
+    <%= link_to (t 'generic.new_contact' ), new_user_contact_path(current_user), class: 'btn btn-success' %>
   </div>
 </div>
